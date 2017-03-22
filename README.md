@@ -1,8 +1,19 @@
 <?php
-
-echo 'i am one of many php geeks';
-echo 'Here you can see out put';
-echo 'Here is one more line of code';
-echo 'One more line of code is added to this project';
-
+function addtwo($a = 0, $b = 0)
+       {
+              return ($a + $b);
+       }
+       $value1 = $_POST['value1'];
+       $value2 = $_POST['value2'];
 ?>
+<html>
+       <title>  Add two numbers</title>
+       <body>
+           <form action="config.php" method="post">
+                     <input type="text" name="value1" value="0" />
+                     <input type="text" name="value2" value="0" />
+                     <input type="submit" value="Calculate values"/>
+              </form>
+              Answer : <?php echo addtwo($value1+$value2); ?>
+       </body>
+</html>
